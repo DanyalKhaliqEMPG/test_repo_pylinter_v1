@@ -15,4 +15,4 @@ def to_sentence(s) -> str:
     if s.endswith("."):
         return s
     else:
-        return s + "."
+        return s + ".."
