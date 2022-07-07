@@ -33,6 +33,8 @@ jobs:
       #     if [ -d tests ] || [ -d test ]; then python -m pytest; fi
       - name: Generate Report
         run: |
-          coverage run -m unittest
+          coverage run -m pytest
+          coverage report  -m --omit="test*"
+          ls
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v2
